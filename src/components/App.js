@@ -7,6 +7,7 @@ import Home from './Home/Home';
 import Bio from './Bio/Bio';
 import Gallery from './Gallery/Gallery';
 import Services from './Services/Services';
+import Contact from './Contact/Contact';
 
 export default class App extends React.Component {
     render() {
@@ -18,7 +19,7 @@ export default class App extends React.Component {
                     <Route path="/bio/" component={Bio}/>
                     <Route path="/gallery/" component={Gallery}/>
                     <Route path="/services/" component={Services}/>
-                    <Route/>
+                    <Route path="/contact/" component={Contact}/>
                 </Switch>
                 <Footer/>
             </div>
