@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router';
 
 import Header from './Header';
 import Footer from './Footer';
+import Home from './Home/Home';
 
 export default class App extends React.Component {
     render() {
@@ -10,7 +11,7 @@ export default class App extends React.Component {
             <div>
                 <Header/>
                 <Switch>
-                    <Route/>
+                    <Route exact path="/" component={Home}/>
                     <Route/>
                     <Route/>
                     <Route/>
