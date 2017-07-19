@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from './Home/Home';
 import Bio from './Bio/Bio';
+import Gallery from './Gallery/Gallery';
 
 export default class App extends React.Component {
     render() {
@@ -14,7 +15,7 @@ export default class App extends React.Component {
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/bio/" component={Bio}/>
-                    <Route/>
+                    <Route path="/gallery/" component={Gallery}/>
                     <Route/>
                     <Route/>
                 </Switch>
