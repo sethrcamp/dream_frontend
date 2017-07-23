@@ -1,0 +1,52 @@
+.header {
+  padding: 50px 10vw 0 0;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    background: $headerblue; //424456
+    align-items: center;
+    img {
+      padding: 0 10px;
+      height: 35px;
+    }
+    ul {
+      padding: 0 40px;
+      margin: 0;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      li {
+        height: 50px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          transition: .5s;
+          font-size: 20px;
+          font-family: headerFont;
+          text-decoration: none;
+          color: white;
+          &::before, &::after {
+            content: "\2014";
+            color: transparent;
+            transition: .5s;
+          }
+          &:hover{
+            transform: scale(1.15);
+          }
+        }
+        .selected {
+          transform: scale(1.3) !important;
+          transition: .5s;
+          &::before, &::after {
+            color: white;
+            transition: .5s;
+          }
+        }
+      }
+    }
+  }
+}

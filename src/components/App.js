@@ -2,17 +2,18 @@ import React from 'react';
 import {Switch, Route} from 'react-router';
 
 import Header from './Header';
-import Footer from './Footer';
 import Home from './Home/Home';
 import Bio from './Bio/Bio';
 import Gallery from './Gallery/Gallery';
 import Services from './Services/Services';
 import Contact from './Contact/Contact';
 
+import '../css/index.css';
+
 export default class App extends React.Component {
     render() {
         return (
-            <div>
+            <div className="app">
                 <Header/>
                 <Switch>
                     <Route exact path="/" component={Home}/>
@@ -21,7 +22,6 @@ export default class App extends React.Component {
                     <Route path="/services/" component={Services}/>
                     <Route path="/contact/" component={Contact}/>
                 </Switch>
-                <Footer/>
             </div>
         );
     }

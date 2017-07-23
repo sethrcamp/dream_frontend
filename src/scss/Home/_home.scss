@@ -1,0 +1,77 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow-y: scroll;
+  height: calc(100vh - 100px);
+  width: 100vw;
+  max-width: 100%;
+  .carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    min-height: 90%;
+    width: 100%;
+    .carouselImage {
+      max-width: calc(100vw - 200px);
+      max-height: 90%;
+    }
+    .arrow {
+      width: 100px;
+      transition: .2s;
+      &:hover{
+        cursor: pointer;
+        transition: .2s;
+        transform: scale(1.1);
+      }
+    }
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 250px;
+      margin-bottom: 100px;
+      p{
+        max-width: 250px;
+      }
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+          color: white;
+          font-size: 50px;
+          position: absolute;
+          margin: 0;
+          font-family: secondaryFont;
+          &:hover {
+            pointer-events: none;
+            cursor: pointer;
+          }
+        }
+        img{
+          max-height: 200px;
+          max-width: 200px;
+          &:hover {
+            transform: scale(1.01);
+          }
+        }
+      }
+
+    }
+
+  }
+
+}

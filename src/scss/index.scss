@@ -1,0 +1,23 @@
+$lightblue: #999fff; //999fff
+$headerblue: #424456; //424456
+
+@font-face {
+  font-family: headerFont;
+  src: url(http://localhost:8888/dream_frontend/src/assets/fonts/CaviarDreams_Bold.ttf);
+}
+@font-face {
+  font-family: secondaryFont;
+  src: url(http://localhost:8888/dream_frontend/src/assets/fonts/ProzaLibre-Regular.ttf);
+}
+
+@import "app";
+@import "header";
+@import "Home/home";
+
+
+html, body{
+  margin: 0;
+  min-height: 100%;
+  max-width: 100%;
+  overflow-y: hidden;
+}

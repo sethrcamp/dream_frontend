@@ -1,0 +1,122 @@
+@font-face {
+  font-family: headerFont;
+  src: url(http://localhost:8888/dream_frontend/src/assets/fonts/CaviarDreams_Bold.ttf); }
+
+@font-face {
+  font-family: secondaryFont;
+  src: url(http://localhost:8888/dream_frontend/src/assets/fonts/ProzaLibre-Regular.ttf); }
+
+.app {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(black, #999fff); }
+
+.header {
+  padding: 50px 10vw 0 0; }
+  .header div {
+    display: flex;
+    flex-direction: row;
+    background: #424456;
+    align-items: center; }
+    .header div img {
+      padding: 0 10px;
+      height: 35px; }
+    .header div ul {
+      padding: 0 40px;
+      margin: 0;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .header div ul li {
+        height: 50px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .header div ul li a {
+          transition: .5s;
+          font-size: 20px;
+          font-family: headerFont;
+          text-decoration: none;
+          color: white; }
+          .header div ul li a::before, .header div ul li a::after {
+            content: "\2014";
+            color: transparent;
+            transition: .5s; }
+          .header div ul li a:hover {
+            transform: scale(1.15); }
+        .header div ul li .selected {
+          transform: scale(1.3) !important;
+          transition: .5s; }
+          .header div ul li .selected::before, .header div ul li .selected::after {
+            color: white;
+            transition: .5s; }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow-y: scroll;
+  height: calc(100vh - 100px);
+  width: 100vw;
+  max-width: 100%; }
+  .home .carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    min-height: 90%;
+    width: 100%; }
+    .home .carousel .carouselImage {
+      max-width: calc(100vw - 200px);
+      max-height: 90%; }
+    .home .carousel .arrow {
+      width: 100px;
+      transition: .2s; }
+      .home .carousel .arrow:hover {
+        cursor: pointer;
+        transition: .2s;
+        transform: scale(1.1); }
+  .home .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%; }
+    .home .links div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 250px;
+      margin-bottom: 100px; }
+      .home .links div p {
+        max-width: 250px; }
+      .home .links div a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .home .links div a h1 {
+          color: white;
+          font-size: 50px;
+          position: absolute;
+          margin: 0;
+          font-family: secondaryFont; }
+          .home .links div a h1:hover {
+            pointer-events: none;
+            cursor: pointer; }
+        .home .links div a img {
+          max-height: 200px;
+          max-width: 200px; }
+          .home .links div a img:hover {
+            transform: scale(1.01); }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  max-width: 100%;
+  overflow-y: hidden; }
