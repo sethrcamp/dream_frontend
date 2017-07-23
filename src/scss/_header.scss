@@ -6,9 +6,16 @@
     flex-direction: row;
     background: $headerblue; //424456
     align-items: center;
-    img {
-      padding: 0 10px;
+    .logo, .socialMedia{
       height: 35px;
+      img {
+        padding: 0 7.5px;
+        height: 100%;
+        &:hover {
+          transform: scale(1.05);
+          transition: .3s;
+        }
+      }
     }
     ul {
       padding: 0 40px;

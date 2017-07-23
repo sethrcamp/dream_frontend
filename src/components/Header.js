@@ -18,7 +18,7 @@ export default class Header extends React.Component {
         return(
             <div className="header">
                 <div>
-                    <a href="">
+                    <a className="logo" href="">
                         <img src={logo}
                              onClick={() => {
                                  this.setState({"selected": 0})
@@ -59,10 +59,10 @@ export default class Header extends React.Component {
                             >Contact</a>
                         </li>
                     </ul>
-                    <a href="https://www.facebook.com/dreamesquephotography/" target="_blank">
+                    <a className="socialMedia" href="https://www.facebook.com/dreamesquephotography/" target="_blank">
                         <img src={facebook}/>
                     </a>
-                    <a href="https://www.instagram.com/dreamesque_photography/" target="_blank">
+                    <a className="socialMedia" href="https://www.instagram.com/dreamesque_photography/" target="_blank">
                         <img src={instagram}/>
                     </a>
                 </div>

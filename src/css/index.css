@@ -18,9 +18,14 @@
     flex-direction: row;
     background: #424456;
     align-items: center; }
-    .header div img {
-      padding: 0 10px;
+    .header div .logo, .header div .socialMedia {
       height: 35px; }
+      .header div .logo img, .header div .socialMedia img {
+        padding: 0 7.5px;
+        height: 100%; }
+        .header div .logo img:hover, .header div .socialMedia img:hover {
+          transform: scale(1.05);
+          transition: .3s; }
     .header div ul {
       padding: 0 40px;
       margin: 0;
@@ -80,6 +85,9 @@
         cursor: pointer;
         transition: .2s;
         transform: scale(1.1); }
+      .home .carousel .arrow:active {
+        transform: scale(1);
+        transition: 0s !important; }
   .home .links {
     display: flex;
     flex-direction: row;
@@ -105,9 +113,9 @@
           font-size: 50px;
           position: absolute;
           margin: 0;
-          font-family: secondaryFont; }
+          font-family: secondaryFont;
+          pointer-events: none; }
           .home .links div a h1:hover {
-            pointer-events: none;
             cursor: pointer; }
         .home .links div a img {
           max-height: 200px;

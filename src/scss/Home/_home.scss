@@ -27,6 +27,10 @@
         transition: .2s;
         transform: scale(1.1);
       }
+      &:active {
+        transform: scale(1);
+        transition: 0s !important;
+      }
     }
   }
   .links {
@@ -56,8 +60,8 @@
           position: absolute;
           margin: 0;
           font-family: secondaryFont;
+          pointer-events: none;
           &:hover {
-            pointer-events: none;
             cursor: pointer;
           }
         }
