@@ -19,9 +19,28 @@
       max-width: calc(100vw - 200px);
       max-height: 90%;
     }
-    .arrow {
+    .arrowLeft {
+      position: relative;
+      left: 10%;
       width: 100px;
       transition: .2s;
+      opacity: .5;
+      &:hover{
+        cursor: pointer;
+        transition: .2s;
+        transform: scale(1.1);
+      }
+      &:active {
+        transform: scale(1);
+        transition: 0s !important;
+      }
+    }
+    .arrowRight {
+      position: relative;
+      right: 10%;
+      width: 100px;
+      transition: .2s;
+      opacity: .5;
       &:hover{
         cursor: pointer;
         transition: .2s;
@@ -48,12 +67,16 @@
       margin-bottom: 100px;
       p{
         max-width: 250px;
+        color: white;
       }
       a {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        &:hover {
+          transform: scale(1.01);
+        }
         h1 {
           color: white;
           font-size: 50px;
@@ -68,9 +91,6 @@
         img{
           max-height: 200px;
           max-width: 200px;
-          &:hover {
-            transform: scale(1.01);
-          }
         }
       }
 

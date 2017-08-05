@@ -9,14 +9,15 @@
 .app {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(black, #999fff); }
+  background: black;
+  /*#B2BAF8;*/ }
 
 .header {
-  padding: 50px 10vw 0 0; }
+  padding: 50px 0 0 0; }
   .header div {
     display: flex;
     flex-direction: row;
-    background: #424456;
+    background: #515151;
     align-items: center; }
     .header div .logo, .header div .socialMedia {
       height: 35px; }
@@ -49,10 +50,7 @@
             content: "\2014";
             color: transparent;
             transition: .5s; }
-          .header div ul li a:hover {
-            transform: scale(1.15); }
         .header div ul li .selected {
-          transform: scale(1.3) !important;
           transition: .5s; }
           .header div ul li .selected::before, .header div ul li .selected::after {
             color: white;
@@ -78,14 +76,30 @@
     .home .carousel .carouselImage {
       max-width: calc(100vw - 200px);
       max-height: 90%; }
-    .home .carousel .arrow {
+    .home .carousel .arrowLeft {
+      position: relative;
+      left: 10%;
       width: 100px;
-      transition: .2s; }
-      .home .carousel .arrow:hover {
+      transition: .2s;
+      opacity: .5; }
+      .home .carousel .arrowLeft:hover {
         cursor: pointer;
         transition: .2s;
         transform: scale(1.1); }
-      .home .carousel .arrow:active {
+      .home .carousel .arrowLeft:active {
+        transform: scale(1);
+        transition: 0s !important; }
+    .home .carousel .arrowRight {
+      position: relative;
+      right: 10%;
+      width: 100px;
+      transition: .2s;
+      opacity: .5; }
+      .home .carousel .arrowRight:hover {
+        cursor: pointer;
+        transition: .2s;
+        transform: scale(1.1); }
+      .home .carousel .arrowRight:active {
         transform: scale(1);
         transition: 0s !important; }
   .home .links {
@@ -102,12 +116,15 @@
       height: 250px;
       margin-bottom: 100px; }
       .home .links div p {
-        max-width: 250px; }
+        max-width: 250px;
+        color: white; }
       .home .links div a {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center; }
+        .home .links div a:hover {
+          transform: scale(1.01); }
         .home .links div a h1 {
           color: white;
           font-size: 50px;
@@ -120,8 +137,119 @@
         .home .links div a img {
           max-height: 200px;
           max-width: 200px; }
-          .home .links div a img:hover {
-            transform: scale(1.01); }
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow-y: scroll;
+  height: calc(100vh - 100px); }
+  .gallery a {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    color: white;
+    font-family: secondaryFont;
+    font-size: 22px; }
+    .gallery a:hover {
+      transform: scale(1.05); }
+    .gallery a h1 {
+      margin: 0;
+      position: absolute; }
+    .gallery a img {
+      margin: 20px;
+      height: 300px; }
+
+.category {
+  width: 100%;
+  height: calc(100vh - 100px);
+  overflow-y: scroll; }
+
+.photo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px; }
+  .photo img {
+    max-width: calc((100vw - 50px) / 2);
+    max-height: 275px; }
+  .photo p {
+    text-align: center;
+    color: white;
+    font-family: secondaryFont; }
+  .photo .leftText {
+    padding: 0 0 0 30px; }
+  .photo .rightText {
+    padding: 0 30px 0 0; }
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: calc(100vh - 100px); }
+  .contact span {
+    color: white;
+    font-family: secondaryFont; }
+  .contact .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc((100vh - 100px) / 3);
+    margin-top: 3vh; }
+    .contact .info span {
+      padding: 1vh 0;
+      font-size: calc(100vw / 27); }
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    width: 80vw;
+    padding: 0 10vw; }
+    .contact form div {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding: 2vh 0; }
+      .contact form div span {
+        padding-right: 10px;
+        font-size: 5vw;
+        line-height: 7.5vh;
+        display: block;
+        width: 18vw;
+        text-align: end; }
+      .contact form div input {
+        height: 7vh;
+        flex-grow: 1;
+        padding-left: 10px; }
+      .contact form div textarea {
+        height: 14vh;
+        max-height: 14vh;
+        max-width: calc(61.1vw - 10px);
+        flex-grow: 1;
+        font-size: 2.5vw;
+        padding-left: 10px; }
+    .contact form section {
+      background-color: #A0A4D8;
+      width: 20vw;
+      margin-left: calc(60vw - 6px);
+      border: solid white 3px;
+      height: 5vh;
+      color: white;
+      text-align: center;
+      font-size: 3vw;
+      margin-top: 1vh;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
 
 html, body {
   margin: 0;

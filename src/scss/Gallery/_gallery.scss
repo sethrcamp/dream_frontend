@@ -1,0 +1,32 @@
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow-y: scroll;
+  height: calc(100vh - 100px);
+
+  a {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    color: white;
+    font-family: secondaryFont;
+    font-size: 22px;
+    &:hover {
+      transform: scale(1.05);
+    }
+    h1 {
+      margin: 0;
+      position: absolute;
+    }
+    img {
+      margin: 20px;
+      height: 300px;
+    }
+  }
+}

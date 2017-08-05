@@ -1,10 +1,10 @@
 .header {
-  padding: 50px 10vw 0 0;
+  padding: 50px 0 0 0;
 
   div {
     display: flex;
     flex-direction: row;
-    background: $headerblue; //424456
+    background: #515151; //headerblue
     align-items: center;
     .logo, .socialMedia{
       height: 35px;
@@ -42,11 +42,11 @@
             transition: .5s;
           }
           &:hover{
-            transform: scale(1.15);
+            //transform: scale(1.15);
           }
         }
         .selected {
-          transform: scale(1.3) !important;
+          //transform: scale(1.3) !important;
           transition: .5s;
           &::before, &::after {
             color: white;

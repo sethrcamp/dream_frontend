@@ -1,5 +1,5 @@
 $lightblue: #999fff; //999fff
-$headerblue: #424456; //424456
+$headerblue: #7C81A0; //9A9FC3 //424456
 
 @font-face {
   font-family: headerFont;
@@ -13,6 +13,10 @@ $headerblue: #424456; //424456
 @import "app";
 @import "header";
 @import "Home/home";
+@import "Gallery/gallery";
+@import "Gallery/category";
+@import "Gallery/photo";
+@import "Contact/contact";
 
 
 html, body{

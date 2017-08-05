@@ -7,6 +7,7 @@ import Bio from './Bio/Bio';
 import Gallery from './Gallery/Gallery';
 import Services from './Services/Services';
 import Contact from './Contact/Contact';
+import Category from './Gallery/Category';
 
 import '../css/index.css';
 
@@ -18,6 +19,7 @@ export default class App extends React.Component {
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/bio/" component={Bio}/>
+                    <Route path="/gallery/:category_id" component={Category}/>
                     <Route path="/gallery/" component={Gallery}/>
                     <Route path="/services/" component={Services}/>
                     <Route path="/contact/" component={Contact}/>

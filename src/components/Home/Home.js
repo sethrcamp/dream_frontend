@@ -3,6 +3,8 @@ import React from 'react';
 import leftArrow from '../../assets/left_arrow.svg';
 import rightArrow from '../../assets/right_arrow.svg';
 
+import {BASE_PATH} from '../../conf/conf';
+
 export default class Home extends React.Component {
 
     constructor() {
@@ -10,9 +12,9 @@ export default class Home extends React.Component {
 
         this.state = {
             images: [
-                {"icon": "kitty_2_1.jpeg"},
-                {"icon": "kitty_3_1.jpeg"},
-                {"icon": "kitty_4_1.jpeg"},
+                {"icon": "DP_example_1.jpg"},
+                {"icon": "DP_example_2.jpg"},
+                {"icon": "DP_example_3.JPG"},
                 {"icon": "kitty_1_4.jpeg"},
                 {"icon": "kitty_1_1.jpeg"}
             ],
@@ -46,9 +48,9 @@ export default class Home extends React.Component {
         return(
             <div className="home">
                 <div className="carousel">
-                    <img className="arrow" src={leftArrow} onClick={() => {this.moveCarouselLeft()}}/>
-                    <img className="carouselImage" src={"http://localhost:8888/dream_frontend/src/assets/"+this.state.images[this.state.selected].icon}/>
-                    <img className="arrow" src={rightArrow} onClick={() => {this.moveCarouselRight()}}/>
+                    <img className="arrowLeft" src={leftArrow} onClick={() => {this.moveCarouselLeft()}}/>
+                    <img className="carouselImage" src={BASE_PATH+this.state.images[this.state.selected].icon}/>
+                    <img className="arrowRight" src={rightArrow} onClick={() => {this.moveCarouselRight()}}/>
                 </div>
                 <div className="links">
                     <div>
