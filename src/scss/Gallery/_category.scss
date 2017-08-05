@@ -3,3 +3,13 @@
   height: calc(100vh - 100px);
   overflow-y: scroll;
 }
+.category::-webkit-scrollbar {
+  width: 10px;
+}
+.category::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.category::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}

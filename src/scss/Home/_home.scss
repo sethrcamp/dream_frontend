@@ -21,7 +21,7 @@
     }
     .arrowLeft {
       position: relative;
-      left: 10%;
+      left: 90px;
       width: 100px;
       transition: .2s;
       opacity: .5;
@@ -37,7 +37,7 @@
     }
     .arrowRight {
       position: relative;
-      right: 10%;
+      right: 90px;
       width: 100px;
       transition: .2s;
       opacity: .5;
@@ -98,4 +98,14 @@
 
   }
 
+}
+.home::-webkit-scrollbar {
+  width: 10px;
+}
+.home::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.home::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
 }

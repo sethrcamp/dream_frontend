@@ -78,7 +78,7 @@
       max-height: 90%; }
     .home .carousel .arrowLeft {
       position: relative;
-      left: 10%;
+      left: 90px;
       width: 100px;
       transition: .2s;
       opacity: .5; }
@@ -91,7 +91,7 @@
         transition: 0s !important; }
     .home .carousel .arrowRight {
       position: relative;
-      right: 10%;
+      right: 90px;
       width: 100px;
       transition: .2s;
       opacity: .5; }
@@ -138,6 +138,16 @@
           max-height: 200px;
           max-width: 200px; }
 
+.home::-webkit-scrollbar {
+  width: 10px; }
+
+.home::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+.home::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px; }
+
 .gallery {
   display: flex;
   flex-direction: row;
@@ -165,10 +175,30 @@
       margin: 20px;
       height: 300px; }
 
+.gallery::-webkit-scrollbar {
+  width: 10px; }
+
+.gallery::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+.gallery::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px; }
+
 .category {
   width: 100%;
   height: calc(100vh - 100px);
   overflow-y: scroll; }
+
+.category::-webkit-scrollbar {
+  width: 10px; }
+
+.category::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+.category::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px; }
 
 .photo {
   display: flex;
@@ -206,7 +236,7 @@
     margin-top: 3vh; }
     .contact .info span {
       padding: 1vh 0;
-      font-size: calc(100vw / 27); }
+      font-size: 3.5vmax; }
   .contact form {
     display: flex;
     flex-direction: column;
@@ -221,7 +251,7 @@
       padding: 2vh 0; }
       .contact form div span {
         padding-right: 10px;
-        font-size: 5vw;
+        font-size: 3vmax;
         line-height: 7.5vh;
         display: block;
         width: 18vw;
@@ -229,27 +259,33 @@
       .contact form div input {
         height: 7vh;
         flex-grow: 1;
+        font-size: 2.5vmax;
         padding-left: 10px; }
       .contact form div textarea {
         height: 14vh;
         max-height: 14vh;
         max-width: calc(61.1vw - 10px);
         flex-grow: 1;
-        font-size: 2.5vw;
+        font-size: 2.5vmax;
         padding-left: 10px; }
     .contact form section {
-      background-color: #A0A4D8;
+      background-color: #515151;
       width: 20vw;
       margin-left: calc(60vw - 6px);
       border: solid white 3px;
       height: 5vh;
       color: white;
       text-align: center;
-      font-size: 3vw;
+      font-size: 2.5vmax;
       margin-top: 1vh;
       display: flex;
       justify-content: center;
       align-items: center; }
+      .contact form section:hover {
+        transform: scale(1.05); }
+      .contact form section:active {
+        transform: scale(0.95);
+        transition: .1s; }
 
 html, body {
   margin: 0;

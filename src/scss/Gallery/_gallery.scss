@@ -30,3 +30,13 @@
     }
   }
 }
+.gallery::-webkit-scrollbar {
+   width: 10px;
+ }
+.gallery::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.gallery::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}
