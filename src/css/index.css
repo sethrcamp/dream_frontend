@@ -254,7 +254,7 @@
         font-size: 3vmax;
         line-height: 7.5vh;
         display: block;
-        width: 18vw;
+        width: 11vw;
         text-align: end; }
       .contact form div input {
         height: 7vh;
@@ -264,7 +264,6 @@
       .contact form div textarea {
         height: 14vh;
         max-height: 14vh;
-        max-width: calc(61.1vw - 10px);
         flex-grow: 1;
         font-size: 2.5vmax;
         padding-left: 10px; }
@@ -286,6 +285,101 @@
       .contact form section:active {
         transform: scale(0.95);
         transition: .1s; }
+
+.bio {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: calc(100vh - 100px);
+  width: 100vw;
+  overflow-y: scroll; }
+  @media screen and (min-width: 700px) {
+    .bio {
+      flex-direction: row; } }
+  @media screen and (max-width: 699px) {
+    .bio {
+      flex-direction: column; } }
+  .bio .leftBio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .bio .leftBio span {
+      color: white;
+      font-size: 40px;
+      padding-top: 30px; }
+    .bio .leftBio img {
+      border: solid #515151 2px;
+      max-width: 48vw;
+      max-height: 94vh; }
+  .bio .rightBio {
+    width: 50%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .bio .rightBio p {
+      border: solid #515151 2px;
+      color: white;
+      padding: 0;
+      margin: 0;
+      width: 40vw; }
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
+  overflow-y: scroll; }
+  .services ul {
+    margin: 0;
+    padding: 0; }
+
+.services::-webkit-scrollbar {
+  width: 10px; }
+
+.services::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+.services::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px; }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw; }
+  .section h1 {
+    padding: 0;
+    margin: 35px 0 0 0;
+    color: white;
+    height: 50px; }
+  .section ul {
+    padding: 0;
+    margin: 0; }
+    .section ul li {
+      display: flex;
+      align-items: center;
+      border-bottom: solid #515151 2px; }
+      .section ul li:first-child {
+        border-top: solid #515151 2px; }
+
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 50vw;
+  min-width: 400px; }
+  .price span {
+    color: white;
+    height: 100%;
+    padding: 10px; }
 
 html, body {
   margin: 0;

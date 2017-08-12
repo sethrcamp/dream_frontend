@@ -1,0 +1,14 @@
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 50vw;
+  min-width: 400px;
+  span {
+    color: white;
+    height: 100%;
+    padding: 10px;
+  }
+}
