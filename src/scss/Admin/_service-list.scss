@@ -1,0 +1,41 @@
+.service-list {
+  list-style: none;
+  padding: 0 20vw;
+  margin: 0;
+  li {
+    border-bottom: solid #515151 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    textarea {
+      width: 50%;
+    }
+  }
+  .newGroup {
+    input {
+      width: 50%;
+    }
+    section {
+      border: solid white 2px;
+      background-color: #515151;
+      width: 10%;
+      height: 20px;
+      text-align: center;
+      &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+      &:active {
+        transform: scale(.95);
+      }
+    }
+  }
+  .serviceListHeading {
+    padding: 80px 0 40px 0;
+    display: flex;
+    justify-content: center;
+    span {
+      font-size: 40px;
+    }
+  }
+}

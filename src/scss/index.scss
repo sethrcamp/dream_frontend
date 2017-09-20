@@ -18,9 +18,15 @@ $headerblue: #7C81A0; //9A9FC3 //424456
 @import "Gallery/photo";
 @import "Contact/contact";
 @import "Bio/bio";
+@import "Admin/admin";
+@import "Admin/messages";
+@import "Admin/picture-list";
+@import "Admin/service-list";
+@import "Admin/admin-section";
 @import "Services/services";
 @import "Services/section";
 @import "Services/price";
+@import "hamburger-menu";
 
 html, body{
   margin: 0;

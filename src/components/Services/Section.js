@@ -10,7 +10,7 @@ export default class Section extends React.Component {
                 <ul>
                     {
                         this.props.section.prices.map((price, index) => {
-                            return <li><Price key={index} price={price}/></li>
+                            return <li key={index}><Price price={price}/></li>
                         })
                     }
                 </ul>

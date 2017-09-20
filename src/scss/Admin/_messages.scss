@@ -1,0 +1,31 @@
+.messages {
+  list-style: none;
+  padding: 0 20vw;
+  margin: 0;
+  li {
+    border-bottom: solid #515151 2px;
+    padding: 10px;
+    &:hover:not(.messageHeading){
+      background-color: #222222;
+      cursor: pointer;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      .messageEmail {
+        font-style: italic;
+      }
+    }
+    span {
+      font-size: 25px;
+    }
+  }
+  .messageHeading {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    span {
+      font-size: 40px;
+    }
+  }
+}

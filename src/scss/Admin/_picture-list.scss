@@ -1,0 +1,22 @@
+.picture-list {
+  list-style: none;
+  padding: 0 20vw;
+  margin: 0;
+  li {
+    border-bottom: solid #515151 2px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    textarea {
+      width: 50%;
+    }
+  }
+  .pictureListHeading {
+    padding: 80px 0 40px 0;
+    display: flex;
+    justify-content: center;
+    span {
+      font-size: 40px;
+    }
+  }
+}

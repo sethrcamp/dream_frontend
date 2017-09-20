@@ -1,0 +1,15 @@
+.admin {
+  color: white;
+  height: calc(100vh - 100px);
+  overflow-y: scroll;
+}
+.admin::-webkit-scrollbar {
+  width: 10px;
+}
+.admin::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.admin::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}

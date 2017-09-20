@@ -34,22 +34,29 @@
       justify-content: flex-end;
       padding: 2vh 0;
       span {
-        padding-right: 10px;
-        font-size: 3vmax;
+        padding-right: 5vw;
+        font-size: 2.5vmax;
         line-height: 7.5vh;
         display: block;
-        width: 11vw;
+        width: 15vw;
         text-align: end;
+        font-family: secondaryFont;
       }
       input {
         height: 7vh;
+        width: 60vw;
         flex-grow: 1;
         font-size: 2.5vmax;
         padding-left: 10px;
       }
+      .noInfo {
+        background-color: #ffa096;
+      }
       textarea {
         height: 14vh;
         max-height: 14vh;
+        width: 60vw;
+        max-width: 59.5vw;
         flex-grow: 1;
         font-size: 2.5vmax;
         padding-left: 10px;
@@ -69,6 +76,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: secondaryFont;
       &:hover {
         transform: scale(1.05);
       }

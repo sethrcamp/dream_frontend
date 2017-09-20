@@ -2,50 +2,36 @@ import React from 'react';
 
 import {BASE_PATH} from '../../conf/conf';
 
-export default class Services extends React.Component {
+export default class Gallery extends React.Component {
 
     constructor() {
         super();
 
-        this.state = {
-            categories: [
-                {
-                    id: 0,
-                    name: "Senior",
-                    icon: "kitty_1_1.jpeg"
-                },
-                {
-                    id: 1,
-                    name: "Wedding",
-                    icon: "kitty_1_1.jpeg"
-                },
-                {
-                    id: 2,
-                    name: "Models",
-                    icon: "kitty_1_1.jpeg"
-                },
-                {
-                    id: 3,
-                    name: "Engagement",
-                    icon: "kitty_1_1.jpeg"
-                },
-                {
-                    id: 4,
-                    name: "Test",
-                    icon: "kitty_1_1.jpeg"
-                }
-            ]
-        };
+        this.findMainPicture = this.findMainPicture.bind(this);
+    }
+
+    findMainPicture(category) {
+        var returnValue = "";
+        var pictures = this.props.pictures.categories[category];
+        pictures.forEach((picture) => {
+            var regex = new RegExp(/^MAIN/);
+            if(regex.test(picture.name)) {
+                returnValue = BASE_PATH+"categories/"+category+"/"+picture.name;
+            }
+        });
+        return returnValue;
     }
 
     render() {
+        if(this.props.pictures.length == 0)
+            return null;
         return(
             <div className="gallery">
                 {
-                    this.state.categories.map((category, index) => {
-                        return <a href={"#gallery/"+category.id} key={index}>
-                            <h1>{category.name}</h1>
-                            <img src={BASE_PATH+category.icon}/>
+                    Object.keys(this.props.pictures.categories).map((category, index) => {
+                        return <a href={"#gallery/"+category} key={index}>
+                            <h1>{category}</h1>
+                            <img src={this.findMainPicture(category)}/>
                         </a>
                     })
                 }

@@ -11,13 +11,6 @@ export default class Home extends React.Component {
         super();
 
         this.state = {
-            images: [
-                {"icon": "DP_example_1.jpg"},
-                {"icon": "DP_example_2.jpg"},
-                {"icon": "DP_example_3.JPG"},
-                {"icon": "kitty_1_4.jpeg"},
-                {"icon": "kitty_1_1.jpeg"}
-            ],
             selected: 0
         }
     }
@@ -25,7 +18,7 @@ export default class Home extends React.Component {
     moveCarouselLeft = () => {
         if(this.state.selected == 0)
             this.setState({
-                "selected": this.state.images.length-1
+                "selected": this.props.pictures.carousel.length-1
             });
         else
             this.setState({
@@ -34,7 +27,7 @@ export default class Home extends React.Component {
     };
 
     moveCarouselRight = () => {
-        if(this.state.selected == this.state.images.length-1)
+        if(this.state.selected == this.props.pictures.carousel.length-1)
             this.setState({
                 "selected": 0
             });
@@ -45,25 +38,27 @@ export default class Home extends React.Component {
     };
 
     render() {
+        if(this.props.pictures.length == 0)
+            return null;
         return(
             <div className="home">
                 <div className="carousel">
                     <img className="arrowLeft" src={leftArrow} onClick={() => {this.moveCarouselLeft()}}/>
-                    <img className="carouselImage" src={BASE_PATH+this.state.images[this.state.selected].icon}/>
+                    <img className="carouselImage" src={BASE_PATH+"carousel/"+this.props.pictures.carousel[this.state.selected].name}/>
                     <img className="arrowRight" src={rightArrow} onClick={() => {this.moveCarouselRight()}}/>
                 </div>
                 <div className="links">
                     <div>
                         <p>I am a person. I do photos and stuff.</p>
                         <a href="#bio">
-                            <img src={"http://localhost:8888/dream_frontend/src/assets/kitty_1_1.jpeg"}/>
+                            <img src={BASE_PATH+"bio_link/"+this.props.pictures.bio_link[0].name}/>
                             <h1>Bio</h1>
                         </a>
                     </div>
                     <div>
                         <p>I am a person. I do photos and stuff.</p>
                         <a href="#gallery">
-                            <img src={"http://localhost:8888/dream_frontend/src/assets/kitty_1_1.jpeg"}/>
+                            <img src={BASE_PATH+"gallery_link/"+this.props.pictures.gallery_link[0].name}/>
                             <h1>Gallery</h1>
                         </a>
                     </div>

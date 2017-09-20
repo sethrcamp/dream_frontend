@@ -12,49 +12,69 @@
   background: black;
   /*#B2BAF8;*/ }
 
-.header {
-  padding: 50px 0 0 0; }
-  .header div {
-    display: flex;
-    flex-direction: row;
-    background: #515151;
-    align-items: center; }
-    .header div .logo, .header div .socialMedia {
-      height: 35px; }
-      .header div .logo img, .header div .socialMedia img {
-        padding: 0 7.5px;
-        height: 100%; }
-        .header div .logo img:hover, .header div .socialMedia img:hover {
-          transform: scale(1.05);
-          transition: .3s; }
-    .header div ul {
-      padding: 0 40px;
-      margin: 0;
-      flex-grow: 1;
+@media screen and (min-width: 700px) {
+  .mobile-header {
+    display: none; }
+  .header {
+    padding: 50px 0 0 0; }
+    .header .main-header {
       display: flex;
       flex-direction: row;
-      justify-content: space-between; }
-      .header div ul li {
-        height: 50px;
-        list-style: none;
+      background: #515151;
+      align-items: center; }
+      .header .main-header .socialMedia {
+        height: 25px; }
+        .header .main-header .socialMedia img {
+          padding: 0 15px; }
+      .header .main-header .logo {
+        height: 50px; }
+      .header .main-header .logo img, .header .main-header .socialMedia img {
+        padding: 0 7.5px;
+        height: 100%; }
+        .header .main-header .logo img:hover, .header .main-header .socialMedia img:hover {
+          transform: scale(1.05);
+          transition: .3s; }
+      .header .main-header ul {
+        padding: 0 3vw;
+        margin: 0;
+        flex-grow: 1;
         display: flex;
-        justify-content: center;
-        align-items: center; }
-        .header div ul li a {
-          transition: .5s;
-          font-size: 20px;
-          font-family: headerFont;
-          text-decoration: none;
-          color: white; }
-          .header div ul li a::before, .header div ul li a::after {
-            content: "\2014";
-            color: transparent;
+        flex-direction: row;
+        justify-content: space-between; }
+        .header .main-header ul li {
+          height: 50px;
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .header .main-header ul li a {
+            transition: .5s;
+            font-size: 20px;
+            font-family: headerFont;
+            text-decoration: none;
+            color: white; }
+            .header .main-header ul li a::before, .header .main-header ul li a::after {
+              content: "\2014";
+              color: transparent;
+              transition: .5s; }
+          .header .main-header ul li .selected {
             transition: .5s; }
-        .header div ul li .selected {
-          transition: .5s; }
-          .header div ul li .selected::before, .header div ul li .selected::after {
-            color: white;
-            transition: .5s; }
+            .header .main-header ul li .selected::before, .header .main-header ul li .selected::after {
+              color: white;
+              transition: .5s; } }
+
+@media screen and (max-width: 700px) {
+  .main-header {
+    display: none; }
+  .mobile-header .hamburger {
+    height: 60px;
+    padding: 20px 0 20px 20px;
+    transition: .5s;
+    z-index: 0; }
+    .mobile-header .hamburger:hover {
+      transform: scale(1.1);
+      transition: .5s;
+      cursor: pointer; } }
 
 .home {
   display: flex;
@@ -170,7 +190,8 @@
       transform: scale(1.05); }
     .gallery a h1 {
       margin: 0;
-      position: absolute; }
+      position: absolute;
+      font-family: secondaryFont; }
     .gallery a img {
       margin: 20px;
       height: 300px; }
@@ -250,20 +271,26 @@
       justify-content: flex-end;
       padding: 2vh 0; }
       .contact form div span {
-        padding-right: 10px;
-        font-size: 3vmax;
+        padding-right: 5vw;
+        font-size: 2.5vmax;
         line-height: 7.5vh;
         display: block;
-        width: 11vw;
-        text-align: end; }
+        width: 15vw;
+        text-align: end;
+        font-family: secondaryFont; }
       .contact form div input {
         height: 7vh;
+        width: 60vw;
         flex-grow: 1;
         font-size: 2.5vmax;
         padding-left: 10px; }
+      .contact form div .noInfo {
+        background-color: #ffa096; }
       .contact form div textarea {
         height: 14vh;
         max-height: 14vh;
+        width: 60vw;
+        max-width: 59.5vw;
         flex-grow: 1;
         font-size: 2.5vmax;
         padding-left: 10px; }
@@ -279,7 +306,8 @@
       margin-top: 1vh;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      font-family: secondaryFont; }
       .contact form section:hover {
         transform: scale(1.05); }
       .contact form section:active {
@@ -289,42 +317,181 @@
 .bio {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   height: calc(100vh - 100px);
   width: 100vw;
   overflow-y: scroll; }
   @media screen and (min-width: 700px) {
     .bio {
-      flex-direction: row; } }
+      flex-direction: row;
+      justify-content: center; } }
   @media screen and (max-width: 699px) {
     .bio {
-      flex-direction: column; } }
+      flex-direction: column;
+      justify-content: flex-start; } }
   .bio .leftBio {
+    padding: 0;
+    margin: 0; }
+    .bio .leftBio li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 10px; }
+      .bio .leftBio li span {
+        color: white;
+        font-size: 40px;
+        font-family: secondaryFont; }
+      .bio .leftBio li img {
+        border: solid #515151 2px;
+        max-width: 48vw;
+        max-height: calc(100vh - 250px); }
+  .bio .rightBio p {
+    border: solid #515151 2px;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    width: 40vw;
+    font-family: secondaryFont; }
+
+.bio::-webkit-scrollbar {
+  width: 10px; }
+
+.bio::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+.bio::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px; }
+
+.admin {
+  color: white;
+  height: calc(100vh - 100px);
+  overflow-y: scroll; }
+
+.admin::-webkit-scrollbar {
+  width: 10px; }
+
+.admin::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+.admin::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px; }
+
+.messages {
+  list-style: none;
+  padding: 0 20vw;
+  margin: 0; }
+  .messages li {
+    border-bottom: solid #515151 2px;
+    padding: 10px; }
+    .messages li:hover:not(.messageHeading) {
+      background-color: #222222;
+      cursor: pointer; }
+    .messages li div {
+      display: flex;
+      justify-content: space-between; }
+      .messages li div .messageEmail {
+        font-style: italic; }
+    .messages li span {
+      font-size: 25px; }
+  .messages .messageHeading {
+    padding: 40px 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center; }
-    .bio .leftBio span {
-      color: white;
-      font-size: 40px;
-      padding-top: 30px; }
-    .bio .leftBio img {
-      border: solid #515151 2px;
-      max-width: 48vw;
-      max-height: 94vh; }
-  .bio .rightBio {
-    width: 50%;
-    height: calc(100vh - 100px);
+    .messages .messageHeading span {
+      font-size: 40px; }
+
+.picture-list {
+  list-style: none;
+  padding: 0 20vw;
+  margin: 0; }
+  .picture-list li {
+    border-bottom: solid #515151 2px;
+    padding: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around; }
-    .bio .rightBio p {
-      border: solid #515151 2px;
-      color: white;
-      padding: 0;
-      margin: 0;
-      width: 40vw; }
+    justify-content: space-between; }
+    .picture-list li textarea {
+      width: 50%; }
+  .picture-list .pictureListHeading {
+    padding: 80px 0 40px 0;
+    display: flex;
+    justify-content: center; }
+    .picture-list .pictureListHeading span {
+      font-size: 40px; }
+
+.service-list {
+  list-style: none;
+  padding: 0 20vw;
+  margin: 0; }
+  .service-list li {
+    border-bottom: solid #515151 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; }
+    .service-list li textarea {
+      width: 50%; }
+  .service-list .newGroup input {
+    width: 50%; }
+  .service-list .newGroup section {
+    border: solid white 2px;
+    background-color: #515151;
+    width: 10%;
+    height: 20px;
+    text-align: center; }
+    .service-list .newGroup section:hover {
+      transform: scale(1.05);
+      cursor: pointer; }
+    .service-list .newGroup section:active {
+      transform: scale(0.95); }
+  .service-list .serviceListHeading {
+    padding: 80px 0 40px 0;
+    display: flex;
+    justify-content: center; }
+    .service-list .serviceListHeading span {
+      font-size: 40px; }
+
+.adminSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0; }
+  .adminSection h1 {
+    padding: 15px 0 0 0;
+    margin: 0;
+    color: white;
+    height: 50px;
+    width: 90%;
+    text-align: center; }
+    .adminSection h1:hover {
+      background-color: #222222;
+      cursor: pointer; }
+  .adminSection ul {
+    padding: 0;
+    margin: 0;
+    width: 90%; }
+    .adminSection ul li {
+      display: flex;
+      align-items: center;
+      border-bottom: solid #515151 2px;
+      width: 96%; }
+      .adminSection ul li:first-child {
+        border-top: solid #515151 2px; }
+      .adminSection ul li section {
+        border: solid white 2px;
+        background-color: #515151;
+        width: 10%;
+        height: 20px;
+        text-align: center; }
+        .adminSection ul li section:hover {
+          transform: scale(1.05);
+          cursor: pointer; }
+        .adminSection ul li section:active {
+          transform: scale(0.95); }
+    .adminSection ul .priceLi:hover {
+      background-color: #222222;
+      cursor: pointer; }
 
 .services {
   display: flex;
@@ -337,6 +504,8 @@
   .services ul {
     margin: 0;
     padding: 0; }
+    .services ul li:last-child {
+      margin-bottom: 50px; }
 
 .services::-webkit-scrollbar {
   width: 10px; }
@@ -352,12 +521,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50vw; }
+  width: 60vw; }
   .section h1 {
     padding: 0;
     margin: 35px 0 0 0;
     color: white;
-    height: 50px; }
+    height: 50px;
+    font-family: secondaryFont; }
   .section ul {
     padding: 0;
     margin: 0; }
@@ -375,11 +545,93 @@
   justify-content: space-between;
   height: 100%;
   width: 50vw;
-  min-width: 400px; }
+  min-width: 250px; }
   .price span {
     color: white;
     height: 100%;
-    padding: 10px; }
+    padding: 10px;
+    font-family: secondaryFont; }
+
+.hamburger-all .hamburger-menu {
+  position: fixed;
+  background: #515151;
+  height: 100vh;
+  width: 40vw;
+  min-width: 260px;
+  transition: .5s;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .hamburger-all .hamburger-menu .hamburger-logo img {
+    width: 35vh;
+    height: 20vh;
+    padding: 0 2.5vw; }
+  .hamburger-all .hamburger-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left; }
+    .hamburger-all .hamburger-menu ul li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%; }
+      .hamburger-all .hamburger-menu ul li a {
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        line-height: 80px; }
+        .hamburger-all .hamburger-menu ul li a::before, .hamburger-all .hamburger-menu ul li a::after {
+          content: "\2014";
+          color: transparent;
+          transition: .5s; }
+      .hamburger-all .hamburger-menu ul li .selected {
+        transition: .5s; }
+        .hamburger-all .hamburger-menu ul li .selected::before, .hamburger-all .hamburger-menu ul li .selected::after {
+          color: white;
+          transition: .5s; }
+  .hamburger-all .hamburger-menu div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .hamburger-all .hamburger-menu div span {
+      color: white;
+      text-align: center;
+      padding: 15px 0; }
+    .hamburger-all .hamburger-menu div div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around; }
+      .hamburger-all .hamburger-menu div div .hamburger-social-media img {
+        height: 40px;
+        padding: 10px; }
+
+.hamburger-all .closed {
+  width: 0;
+  transition: .5s; }
+  .hamburger-all .closed * {
+    display: none; }
+
+.hamburger-all .hiddenClick {
+  flex-grow: 1;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: inherit;
+  height: 100vh;
+  width: 60vw;
+  right: 0; }
 
 html, body {
   margin: 0;

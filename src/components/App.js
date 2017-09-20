@@ -8,21 +8,44 @@ import Gallery from './Gallery/Gallery';
 import Services from './Services/Services';
 import Contact from './Contact/Contact';
 import Category from './Gallery/Category';
+import Admin from './Admin/Admin';
+
+import Request from '../requests';
 
 import '../css/index.css';
 
 export default class App extends React.Component {
+
+    constructor() {
+        super();
+
+        this.state = {
+            pictures: []
+        };
+    }
+
+    componentWillMount() {
+        Request.updateDatabase(() => {
+            Request.getFormattedPictures((response) => {
+                this.setState({
+                    pictures: response.data
+                });
+            });
+        });
+    }
+
     render() {
         return (
             <div className="app">
                 <Header/>
                 <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/bio/" component={Bio}/>
-                    <Route path="/gallery/:category_id" component={Category}/>
-                    <Route path="/gallery/" component={Gallery}/>
+                    <Route exact path="/" render={(props) =>  <Home {...props} pictures={this.state.pictures}/>}/>
+                    <Route path="/bio/" render={(props) =>  <Bio {...props} pictures={this.state.pictures}/>}/>
+                    <Route path="/gallery/:category_id" render={(props) =>  <Category {...props} pictures={this.state.pictures}/>}/>
+                    <Route path="/gallery/" render={(props) =>  <Gallery {...props} pictures={this.state.pictures}/>}/>
                     <Route path="/services/" component={Services}/>
                     <Route path="/contact/" component={Contact}/>
+                    <Route path="/admin/" component={Admin}/>
                 </Switch>
             </div>
         );
