@@ -7,12 +7,12 @@ export default class Photo extends React.Component {
         return (
             <div className="photo">
                 {
-                    (this.props.index+1) % 2 == 0 &&
-                    <img src={BASE_PATH+"categories/"+this.props.category+"/"+this.props.photo.name}/>
+                    /*(this.props.index+1) % 2 == 0 &&
+                    <img src={BASE_PATH+"categories/"+this.props.category+"/"+this.props.photo.name}/>*/
                 }
-                <p className={(this.props.index+1) % 2 == 0 ? "leftText" : "rightText"}>{this.props.photo.description}</p>
+                {/*<p className={(this.props.index+1) % 2 == 0 ? "leftText" : "rightText"}>{this.props.photo.description}</p>*/}
                 {
-                    (this.props.index+1) % 2 != 0 &&
+                    /*(this.props.index+1) % 2 != 0 && */
                     <img src={BASE_PATH+"categories/"+this.props.category+"/"+this.props.photo.name}/>
                 }
             </div>

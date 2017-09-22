@@ -2,6 +2,12 @@
   width: 100%;
   height: calc(100vh - 100px);
   overflow-y: scroll;
+  /*DELETE BELOW FOR DESCRIPTION*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .category::-webkit-scrollbar {
   width: 10px;

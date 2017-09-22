@@ -14,35 +14,11 @@ export default class Bio extends React.Component {
                 </ul>
                 <div className="rightBio">
                     <p>
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-
-                    </p>
-                    <p>
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                    </p>
-                    <p>
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
-                        I am a nice person, I like things!
+                        Cody was born and raised in the corn loving state of Indiana.
+                        Recently he packed up and moved to Venice Florida.
+                        He is 19 years old and has an Associates degree in Business Administration.
+                        He currently is a lifeguard and a part time photographer.
+                        He loves to adventure and make memories that last a lifetime.
                     </p>
                 </div>
             </div>

@@ -49,14 +49,14 @@ export default class Home extends React.Component {
                 </div>
                 <div className="links">
                     <div>
-                        <p>I am a person. I do photos and stuff.</p>
+                        <p>Learn more about the artist!</p>
                         <a href="#bio">
                             <img src={BASE_PATH+"bio_link/"+this.props.pictures.bio_link[0].name}/>
                             <h1>Bio</h1>
                         </a>
                     </div>
                     <div>
-                        <p>I am a person. I do photos and stuff.</p>
+                        <p>Check out the gallery!</p>
                         <a href="#gallery">
                             <img src={BASE_PATH+"gallery_link/"+this.props.pictures.gallery_link[0].name}/>
                             <h1>Gallery</h1>
