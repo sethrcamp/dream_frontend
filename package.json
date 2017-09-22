@@ -24,5 +24,6 @@
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar ./src/scss/ -o ./src/css/",
     "watch-css": "npm run build-css && node-sass-chokidar ./src/scss/ -o ./src/css/ --watch --recursive"
-  }
+  },
+  "homepage": "http://dreamesquephotography.com/dreamesque_home/dream_frontend/build/"
 }
