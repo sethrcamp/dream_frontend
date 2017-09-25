@@ -1,10 +1,10 @@
 @font-face {
   font-family: headerFont;
-  src: url(http://localhost:8888/dream_frontend/src/assets/fonts/CaviarDreams_Bold.ttf); }
+  src: url(http://dreamesquephotography.com/fonts/CaviarDreams_Bold.ttf); }
 
 @font-face {
   font-family: secondaryFont;
-  src: url(http://localhost:8888/dream_frontend/src/assets/fonts/ProzaLibre-Regular.ttf); }
+  src: url(http://dreamesquephotography.com/fonts/ProzaLibre-Regular.ttf); }
 
 .app {
   margin: 0;
