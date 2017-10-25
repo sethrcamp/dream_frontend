@@ -61,7 +61,7 @@ export default class Contact extends React.Component {
                     <div>
                         <span>Name</span>
                         <input className={this.state.noName ? "noInfo": "messageField"}
-                               placeholder="Guy Person"
+                               placeholder="Cody Hege"
                                onChange={(e) => {
                                    this.setState({
                                        nameValue: e.currentTarget.value
@@ -72,7 +72,7 @@ export default class Contact extends React.Component {
                     <div>
                         <span>Email</span>
                         <input className={this.state.noEmail ? "noInfo": "messageField"}
-                               placeholder="test@gmail.com"
+                               placeholder="dreamesquephotography@gmail.com"
                                onChange={(e) => {
                                    this.setState({
                                        emailValue: e.currentTarget.value
@@ -83,7 +83,7 @@ export default class Contact extends React.Component {
                     <div>
                         <span>Message</span>
                         <textarea className={this.state.noMessage ? "noInfo": "messageField"}
-                                  placeholder="You are a cool guy!"
+                                  placeholder="I would like to schedule a photo shoot!"
                                   onChange={(e) => {
                                       this.setState({
                                           messageValue: e.currentTarget.value

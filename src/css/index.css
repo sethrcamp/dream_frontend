@@ -85,13 +85,23 @@
   height: calc(100vh - 100px);
   width: 100vw;
   max-width: 100%; }
+  .home .description {
+    height: 10%;
+    min-height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .home .description span {
+      color: white;
+      font-family: secondaryFont;
+      text-align: center; }
   .home .carousel {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 90%;
-    min-height: 90%;
+    height: 80%;
+    min-height: 80%;
     width: 100%; }
     .home .carousel .carouselImage {
       max-width: calc(100vw - 200px);
@@ -133,11 +143,13 @@
       justify-content: center;
       align-items: center;
       width: 50%;
-      height: 250px;
+      height: 350px;
       margin-bottom: 100px; }
-      .home .links div p {
-        max-width: 250px;
-        color: white; }
+      .home .links div span {
+        max-width: 100%;
+        color: white;
+        font-family: secondaryFont;
+        font-size: 1.8vmax; }
       .home .links div a {
         position: relative;
         display: flex;
@@ -147,7 +159,7 @@
           transform: scale(1.01); }
         .home .links div a h1 {
           color: white;
-          font-size: 50px;
+          font-size: 5vmax;
           position: absolute;
           margin: 0;
           font-family: secondaryFont;
@@ -155,8 +167,9 @@
           .home .links div a h1:hover {
             cursor: pointer; }
         .home .links div a img {
-          max-height: 200px;
-          max-width: 200px; }
+          max-height: 300px;
+          max-width: 300px;
+          max-width: 40vw; }
 
 .home::-webkit-scrollbar {
   width: 10px; }
@@ -263,7 +276,7 @@
     margin-top: 3vh; }
     .contact .info span {
       padding: 1vh 0;
-      font-size: 3.5vmax; }
+      font-size: 2.5vmax; }
   .contact form {
     display: flex;
     flex-direction: column;
@@ -288,7 +301,7 @@
         height: 7vh;
         width: 60vw;
         flex-grow: 1;
-        font-size: 2.5vmax;
+        font-size: 2vmax;
         padding-left: 10px; }
       .contact form div .noInfo {
         background-color: #ffa096; }
@@ -298,7 +311,7 @@
         width: 60vw;
         max-width: 59.5vw;
         flex-grow: 1;
-        font-size: 2.5vmax;
+        font-size: 2vmax;
         padding-left: 10px; }
     .contact form section {
       background-color: #515151;

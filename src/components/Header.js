@@ -49,9 +49,9 @@ class Header extends React.Component {
                             <a href="#contact" className={this.props.history.location.pathname == "/contact" ? "selected" : null}>Contact</a>
                         </li>
                     </ul>
-                    <a className="socialMedia" href="https://www.facebook.com/dreamesquephotography/" target="_blank">
-                        <img src={facebook}/>
-                    </a>
+                    {/*<a className="socialMedia" href="https://www.facebook.com/dreamesquephotography/" target="_blank">*/}
+                        {/*<img src={facebook}/>*/}
+                    {/*</a>*/}
                     <a className="socialMedia" href="https://www.instagram.com/dreamesque_photography/" target="_blank">
                         <img src={instagram}/>
                     </a>

@@ -7,13 +7,25 @@
   height: calc(100vh - 100px);
   width: 100vw;
   max-width: 100%;
+  .description {
+    height: 10%;
+    min-height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    span {
+      color: white;
+      font-family: secondaryFont;
+      text-align: center;
+    }
+  }
   .carousel {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 90%;
-    min-height: 90%;
+    height: 80%;
+    min-height: 80%;
     width: 100%;
     .carouselImage {
       max-width: calc(100vw - 200px);
@@ -63,11 +75,13 @@
       justify-content: center;
       align-items: center;
       width: 50%;
-      height: 250px;
+      height: 350px;
       margin-bottom: 100px;
-      p{
-        max-width: 250px;
+      span{
+        max-width: 100%;
         color: white;
+        font-family: secondaryFont;
+        font-size: 1.8vmax;
       }
       a {
         position: relative;
@@ -79,7 +93,7 @@
         }
         h1 {
           color: white;
-          font-size: 50px;
+          font-size: 5vmax;
           position: absolute;
           margin: 0;
           font-family: secondaryFont;
@@ -89,8 +103,9 @@
           }
         }
         img{
-          max-height: 200px;
-          max-width: 200px;
+          max-height: 300px;
+          max-width: 300px;
+          max-width: 40vw;
         }
       }
 

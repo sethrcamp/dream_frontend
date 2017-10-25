@@ -38,9 +38,9 @@ class HamburgerMenu extends React.Component {
                     <div>
                         <span>dreamesquephotography@gmail.com</span>
                         <div>
-                            <a className="hamburger-social-media" href="https://www.facebook.com/dreamesquephotography/" target="_blank">
-                                <img src={facebook}/>
-                            </a>
+                            {/*<a className="hamburger-social-media" href="https://www.facebook.com/dreamesquephotography/" target="_blank">*/}
+                                {/*<img src={facebook}/>*/}
+                            {/*</a>*/}
                             <a className="hamburger-social-media" href="https://www.instagram.com/dreamesque_photography/" target="_blank">
                                 <img src={instagram}/>
                             </a>

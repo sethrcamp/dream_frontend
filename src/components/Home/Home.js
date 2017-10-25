@@ -42,6 +42,9 @@ export default class Home extends React.Component {
             return null;
         return(
             <div className="home">
+                <div className="description">
+                    <span>{this.props.pictures.carousel[this.state.selected].description}</span>
+                </div>
                 <div className="carousel">
                     <img className="arrowLeft" src={leftArrow} onClick={() => {this.moveCarouselLeft()}}/>
                     <img className="carouselImage" src={BASE_PATH+"carousel/"+this.props.pictures.carousel[this.state.selected].name}/>
@@ -49,14 +52,14 @@ export default class Home extends React.Component {
                 </div>
                 <div className="links">
                     <div>
-                        <p>Learn more about the artist!</p>
+                        <span>Learn more about the artist!</span>
                         <a href="#bio">
                             <img src={BASE_PATH+"bio_link/"+this.props.pictures.bio_link[0].name}/>
                             <h1>Bio</h1>
                         </a>
                     </div>
                     <div>
-                        <p>Check out the gallery!</p>
+                        <span>Check out the gallery!</span>
                         <a href="#gallery">
                             <img src={BASE_PATH+"gallery_link/"+this.props.pictures.gallery_link[0].name}/>
                             <h1>Gallery</h1>

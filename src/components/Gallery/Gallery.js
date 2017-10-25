@@ -28,11 +28,13 @@ export default class Gallery extends React.Component {
         return(
             <div className="gallery">
                 {
-                    Object.keys(this.props.pictures.categories).map((category, index) => {
+                    Object.keys(this.props.pictures.categories).filter((category) => {
+                        return category.id != -1;
+                    }).map((category, index) => {
                         return <a href={"#gallery/"+category} key={index}>
-                            <h1>{category}</h1>
-                            <img src={this.findMainPicture(category)}/>
-                        </a>
+                                   <h1>{category}</h1>
+                                   <img src={this.findMainPicture(category)}/>
+                               </a>
                     })
                 }
             </div>

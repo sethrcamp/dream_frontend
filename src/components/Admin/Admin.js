@@ -35,7 +35,7 @@ export default class Admin extends React.Component {
             return (
                 <div className="admin">
                     <Messages/>
-                    {/*<PictureList/>*/}
+                    <PictureList/>
                     <ServiceList/>
                 </div>
             );
