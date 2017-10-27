@@ -35,7 +35,7 @@
           transform: scale(1.05);
           transition: .3s; }
       .header .main-header ul {
-        padding: 0 3vw;
+        padding: 0 3vw 0 calc(3vw + 95px);
         margin: 0;
         flex-grow: 1;
         display: flex;
@@ -243,9 +243,11 @@
 .photo {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 25px; }
+  padding: 25px;
+  flex-grow: 1;
+  width: 29vw; }
   .photo img {
     max-width: calc((100vw - 50px) / 2);
     max-height: 275px; }
