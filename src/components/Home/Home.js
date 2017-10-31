@@ -59,7 +59,7 @@ export default class Home extends React.Component {
                         </a>
                     </div>
                     <div>
-                        <span>Check out the gallery!</span>
+                        <span>Check out his work!</span>
                         <a href="#gallery">
                             <img src={BASE_PATH+"gallery_link/"+this.props.pictures.gallery_link[0].name}/>
                             <h1>Gallery</h1>

@@ -14,10 +14,10 @@ export default class Bio extends React.Component {
                 </ul>
                 <div className="rightBio">
                     <p>
-                        Cody was born and raised in the corn loving state of Indiana.
-                        Recently he packed up and moved to Venice Florida.
-                        He is 19 years old and has an Associates degree in Business Administration.
-                        He currently is a lifeguard and a part time photographer.
+                        Cody is a 19 year old who was born and raised in the corn loving state of Indiana.
+                        He graduated from Edgewood High School and then moved on to getting an associated degree in Business Administration.
+                        Recently he packed up and moved to North Port Florida.
+                        He currently works as a Brand Rep for Hollister and is a part time photographer.
                         He loves to adventure and make memories that last a lifetime.
                     </p>
                 </div>
