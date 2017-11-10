@@ -104,7 +104,7 @@
     min-height: 80%;
     width: 100%; }
     .home .carousel .carouselImage {
-      max-width: calc(100vw - 200px);
+      max-width: 90vw;
       max-height: 90%; }
     .home .carousel .arrowLeft {
       position: relative;
@@ -547,7 +547,8 @@
     padding: 0;
     margin: 35px 0 0 0;
     color: white;
-    height: 50px;
+    min-height: 50px;
+    text-align: center;
     font-family: secondaryFont; }
   .section ul {
     padding: 0;
