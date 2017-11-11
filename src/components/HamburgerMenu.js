@@ -36,7 +36,7 @@ class HamburgerMenu extends React.Component {
                         </ul>
                     </div>
                     <div>
-                        <span>dreamesquephotography@gmail.com</span>
+                        <a href="mailto:dreamesquephotography@gmail.com">Email me here!</a>
                         <div>
                             {/*<a className="hamburger-social-media" href="https://www.facebook.com/dreamesquephotography/" target="_blank">*/}
                                 {/*<img src={facebook}/>*/}

@@ -40,8 +40,13 @@
       color: white;
       padding: 10px;
       margin: 10px;
-      width: 40vw;
       font-family: secondaryFont;
+      @media screen and (min-width: 700px){
+        width: 40vw;
+      }
+      @media screen and (max-width: 699px){
+        width: 80vw;
+      }
     }
   }
 }

@@ -371,8 +371,13 @@
     color: white;
     padding: 10px;
     margin: 10px;
-    width: 40vw;
     font-family: secondaryFont; }
+    @media screen and (min-width: 700px) {
+      .bio .rightBio p {
+        width: 40vw; } }
+    @media screen and (max-width: 699px) {
+      .bio .rightBio p {
+        width: 80vw; } }
 
 .bio::-webkit-scrollbar {
   width: 10px; }
@@ -626,10 +631,10 @@
     display: flex;
     flex-direction: column;
     align-items: center; }
-    .hamburger-all .hamburger-menu div span {
+    .hamburger-all .hamburger-menu div a {
       color: white;
       text-align: center;
-      padding: 15px 0; }
+      padding: 5px 0; }
     .hamburger-all .hamburger-menu div div {
       display: flex;
       flex-direction: row;
