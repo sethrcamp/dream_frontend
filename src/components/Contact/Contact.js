@@ -55,7 +55,7 @@ export default class Contact extends React.Component {
                 <div className="info">
                     <span>Cody Hege</span>
                     <span>dreamesquephotography@gmail.com</span>
-                    <span>812-219-3836</span>
+                    {/*<span>812-219-3836</span>*/}
                 </div>
                 <form>
                     <div>
